@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 12px;
+  gap: 10px;
+  width: 96px;
+  height: 96px;
+  background: #F8D231;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.btn .ok {
+  position: absolute;
+  left: 97.5%;
+  right: -80.42%;
+  top: 3.93%;
+  bottom: 51.62%;
+  /* S — Dark */
+  border: 2px solid #1B191C;
+  transform: rotate(90deg);
+}
+
+/*# sourceMappingURL=ButtonStyle.css.map */

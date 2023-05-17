@@ -1,0 +1,19 @@
+input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32px 16px;
+  gap: 10px;
+
+  width: 524px;
+  height: 96px;
+
+  background: #FFFFFF;
+  border: 0.5px solid #C6A827;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}

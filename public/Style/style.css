@@ -1,10 +1,142 @@
 @import "resetStyles.css";
 .body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.maine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  gap: 10px;
+  position: relative;
   background: #1B191C;
+}
+
+.maine_info {
+  padding: 0 20% 0 0;
 }
 
 .input_section_light {
   background: #EEEEEE;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+}
+.input_section_light .maine_info {
+  flex-basis: 50%;
+}
+.input_section_light .url_search {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+}
+
+.maine_dark {
+  color: #000000;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -1px;
+  margin: 0 0 15px 0;
+  color: #000000;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: #1B191C;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0 0 200px 0;
+}
+
+.mini_title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.3px;
+  color: #1B191C;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.url_search .insert {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0 5px 0;
+  letter-spacing: -0.4px;
+  color: #1B191C;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+@media (max-width: 800px) {
+  .maine_info {
+    flex-basis: 100%;
+    padding: 0;
+  }
+  .title {
+    width: 296px;
+    height: 120px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 110%;
+    letter-spacing: -0.4px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  .subtitle {
+    width: 296px;
+    height: 64px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: #1B191C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .mini_title {
+    width: 245px;
+    height: 16px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+    color: #1B191C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .url_search {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

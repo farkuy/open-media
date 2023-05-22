@@ -1,23 +1,23 @@
 import React, {useState} from 'react';
 import SearchUrl from "../Search/SearchUrl";
 import Button from "../Button/Button";
-import MusicPlayer from "../MusicPlayer/MusicPlayer";
 import {useDispatch, useSelector} from "react-redux";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import './PlayerForm.css'
 
 const PlayerForm = () => {
 
     const [searchMusic, setSearchMusic] = useState(``);
 
     const dispatch = useDispatch();
-    const errorVisible = useSelector(state => state.error.visible)
+    const errorVisible = useSelector(state => state.error.visible);
 
     const urlSongSearch = (url) => {
         setSearchMusic(url);
     }
 
     return (
-        <form >
+        <form className={'player_form'}>
             <SearchUrl urlSongSearch={urlSongSearch}/>
             <Button urlAudio={searchMusic}/>
             {

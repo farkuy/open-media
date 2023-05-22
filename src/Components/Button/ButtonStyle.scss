@@ -1,4 +1,5 @@
-.btn {
+.arrow {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,21 +12,63 @@
 
   background: #F8D231;
 
+  /* Inside auto layout */
+
   flex: none;
   order: 1;
   flex-grow: 0;
 
-
-  .ok {
-    position: absolute;
-    left: 97.5%;
-    right: -80.42%;
-    top: 3.93%;
-    bottom: 51.62%;
-
-    /* S — Dark */
-
-    border: 2px solid #1B191C;
-    transform: rotate(90deg)
-  }
+  border-radius: 5px;
 }
+
+.right-arrow {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.right-arrow::before,
+.right-arrow::after {
+  display: inline-flex;
+  position: absolute;
+  content: '';
+}
+
+
+.right-arrow::before {
+  top: 12.5px;
+  left: -7px;
+  width: 30px;
+  height: 2px;
+  background-color: #1B191C;
+}
+
+.right-arrow::after {
+  width: 20px;
+  height: 20px;
+  top: 3.5px;
+}
+
+
+
+.right-arrow::after {
+  right: 0;
+  border-top: 2.4px solid #1B191C;;
+  border-right:2.4px solid #1B191C;;
+  transform: rotate(45deg);
+}
+
+
+.right-arrow:hover::before {
+  background-color: black;
+}
+
+
+
+.right-arrow:hover::after {
+  border-top: 2px solid #1B191C;;
+  border-right: 2px solid #1B191C;;
+}
+

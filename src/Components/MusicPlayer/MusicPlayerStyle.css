@@ -1,0 +1,14 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  width: 620px;
+  height: 198px;
+  background: #CFD3D6;
+  flex: none;
+  order: 1;
+}
+
+/*# sourceMappingURL=MusicPlayerStyle.css.map */

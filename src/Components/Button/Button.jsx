@@ -2,13 +2,11 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import './ButtonStyle.css'
 
-const Button = ({urlAudio}) => {
+const Button = () => {
 
     const dispatch = useDispatch();
     const urlSong = useSelector(state => state.urlSong.urlSong);
-    const visibleForm = useSelector(state => state.visibleForm.visible);
-    const errorMessage = useSelector(state => state.error.message);
-    const errorVisible = useSelector(state => state.error.visible)
+    const requestHistory = useSelector(state => state.requestHistory.getStore);
 
     const playAudio = async (e) => {
         e.preventDefault();
@@ -20,23 +18,20 @@ const Button = ({urlAudio}) => {
         }
 
         try {
-            const audio = new Audio(urlSong);
-            /*if (!audio.canPlayType()) {
-                throw new Error('Invalid audio URL');
-            }*/
+            const audio = await new Audio(urlSong);
 
-            audio.oncanplay = () => {
-                alert(`Робит`)
-            };
+            await audio.play();
+            await audio.pause();
 
-            audio.onerror = () => {
-                return
-            };
+            if(!requestHistory.includes(urlSong)) {
+                dispatch({type: 'ADD_STORE', payload: urlSong})
+            }
 
-            await audio.load();
-
-            dispatch({type: 'ADD_VISIBLE', payload: false})
+            dispatch({type: 'ADD_VISIBLE', payload: false});
+            dispatch({type:'ADD_VISIBLE_ERROR', payload: false});
+            dispatch({type:'ADD_MESSAGE', payload: ``});
         } catch (e) {
+            console.error(e.message)
             dispatch({type:'ADD_VISIBLE_ERROR', payload: true});
             dispatch({type:'ADD_MESSAGE', payload: e.message});
         }
@@ -45,15 +40,10 @@ const Button = ({urlAudio}) => {
 
     return (
         <button
+            className={'arrow'}
             onClick={playAudio}
         >
-        <div className={`btn`}>
-
-                <div className={`vector`}>
-                </div>
-                <div className={`ok`}>
-                </div>
-        </div>
+            <div className="right-arrow"></div>
         </button>
     );
 };

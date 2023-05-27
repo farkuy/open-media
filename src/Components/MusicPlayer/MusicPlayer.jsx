@@ -1,27 +1,36 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import './MusicPlayerStyle.css'
 import ButtonBack from "../Back/ButtonBack";
 import PlayerDisplay from "./PlayerDisplay";
+import Loader from "../Loader/Loader";
 
 const MusicPlayer = () => {
 
     const song = useRef(null);
-    const [timeNow, setTimeNow] = useState(0);
 
-    const dispatch = useDispatch();
+
     const finishUrlSong = useSelector(state => state.urlSong.urlSong);
-    const play = (e) => {
+    const [songLoaded, setSongLoaded] = useState(false);
+
+    useEffect(() => {
+        if (song.current.readyState >= 3) {
+            setSongLoaded(true);
+        }
+    }, [finishUrlSong]);
+
+    const play = async (e) => {
         song.current.play();
     }
-
-    const pause = (e) => {
+    const pause = async (e) => {
         song.current.pause()
     }
+
     return (
-        <div>
-            <ButtonBack/>
+        <div className={`centerR`}>
+            <ButtonBack song={song} pause={pause}/>
             <audio ref={song} id="player" src={finishUrlSong}></audio>
+            <Loader songLoaded={songLoaded}/>
             <PlayerDisplay song={song} play={play} pause={pause}/>
         </div>
 

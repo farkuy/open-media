@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-
+import './Error.css'
 const ErrorMessage = () => {
 
     const dispatch = useDispatch();
@@ -8,7 +8,7 @@ const ErrorMessage = () => {
 
 
     return (
-        <div>
+        <div className={`error`}>
             {errorMessage}
         </div>
     );

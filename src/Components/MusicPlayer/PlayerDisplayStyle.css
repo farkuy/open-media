@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .player {
   display: flex;
   flex-direction: column;
@@ -8,10 +7,28 @@
   width: 620px;
   height: 198px;
   background: #CFD3D6;
-  /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
+}
+.player .volume {
+  -webkit-appearance: none;
+  width: 252px;
+  height: 2px;
+  background: #FFFFFF;
+  outline: none;
+  position: relative;
+  left: 56.6%;
+  top: 25%;
+}
+.player .volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 12px;
+  background: #000000;
+  margin-top: -5px;
+  position: relative;
+  z-index: 1;
 }
 .player .range {
   -webkit-appearance: none;
@@ -39,11 +56,9 @@
 .playBtn {
   width: 40px;
   height: 40px;
-  border-top: 20px solid #CFD3D6; /* Задает верхнюю границу треугольника */
-  border-bottom: 20px solid #CFD3D6; /* Задает нижнюю границу треугольника */
-  border-left: 40px solid #FFFFFF; /* Задает левую границу треугольника и ус
-
-/* Inside auto layout */
+  border-top: 20px solid #CFD3D6;
+  border-bottom: 20px solid #CFD3D6;
+  border-left: 40px solid #FFFFFF;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -69,38 +84,51 @@
   right: 0;
 }
 
-.slider {
-  position: relative;
-  top: 10px;
-  width: 580px;
-  height: 2px;
-  background: #ADACAD;
-}
-
-.thumb {
-  position: absolute;
-  width: 16px;
-  height: 12px;
-  top: -5px;
-  background: #FFFFFF;
-  border-radius: 6px;
-}
-
-.time {
-  width: 33px;
-  height: 16px;
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  /* identical to box height, or 133% */
-  letter-spacing: -0.3px;
-  color: #1B191C;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+@media (max-width: 800px) {
+  .player {
+    width: 580px;
+  }
+  .player .volume {
+    -webkit-appearance: none;
+    width: 40%;
+    height: 2px;
+    background: #FFFFFF;
+    outline: none;
+    position: relative;
+    left: 56.6%;
+    top: 25%;
+  }
+  .player .volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 12px;
+    background: #000000;
+    margin-top: -5px;
+    position: relative;
+    z-index: 1;
+  }
+  .player .range {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 2px;
+    background: #ADACAD;
+    outline: none;
+  }
+  .player .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 12px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    margin-top: -5px;
+  }
+  .player .range::-moz-range-thumb {
+    width: 16px;
+    height: 12px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    margin-top: -5px;
+  }
 }
 
 /*# sourceMappingURL=PlayerDisplayStyle.css.map */

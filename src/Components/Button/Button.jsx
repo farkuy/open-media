@@ -27,6 +27,7 @@ const Button = () => {
                 dispatch({type: 'ADD_STORE', payload: urlSong})
             }
 
+            dispatch({type: 'ADD_URL_SONG', payload: urlSong});
             dispatch({type: 'ADD_VISIBLE', payload: false});
             dispatch({type:'ADD_VISIBLE_ERROR', payload: false});
             dispatch({type:'ADD_MESSAGE', payload: ``});

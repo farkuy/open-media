@@ -8,7 +8,6 @@ const SearchUrl = ({urlSongSearch}) => {
 
     const dispatch = useDispatch();
     const requestStoreVision = useSelector(state => state.requestHistory.visibleStore);
-    const requestStore = useSelector(state => state.requestHistory.getStore);
     const urlSearch = async (e) => {
         e.preventDefault();
 

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import SearchUrl from "../Search/SearchUrl";
 import Button from "../Button/Button";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import './PlayerForm.css'
 
@@ -9,7 +9,6 @@ const PlayerForm = () => {
 
     const [searchMusic, setSearchMusic] = useState(``);
 
-    const dispatch = useDispatch();
     const errorVisible = useSelector(state => state.error.visible);
 
     const urlSongSearch = (url) => {
@@ -18,8 +17,11 @@ const PlayerForm = () => {
 
     return (
         <form className={'player_form'}>
-            <SearchUrl urlSongSearch={urlSongSearch}/>
-            <Button urlAudio={searchMusic}/>
+            <div className="insert">Insert the link</div>
+            <div className={`row`}>
+                <SearchUrl urlSongSearch={urlSongSearch}/>
+                <Button urlAudio={searchMusic}/>
+            </div>
             {
                 errorVisible
                 ? <ErrorMessage/>

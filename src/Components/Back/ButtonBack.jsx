@@ -1,14 +1,15 @@
 import React from 'react';
 import button from "../Button/Button";
 import './ButtonBackStyle.css'
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
-const ButtonBack = () => {
+const ButtonBack = ({song, pause}) => {
     const dispatch = useDispatch();
 
-    const back = (e) => {
+    const back = async (e) => {
         e.preventDefault();
 
+        dispatch({type: 'ADD_URL_SONG', payload: ``});
         dispatch({type: 'ADD_VISIBLE', payload: true});
     }
 
@@ -16,7 +17,7 @@ const ButtonBack = () => {
         <button
             onClick={back}
         >
-            Back
+            ← Back
         </button>
     );
 };

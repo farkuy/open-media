@@ -7,13 +7,14 @@ import {useDispatch, useSelector} from "react-redux";
 function App() {
 
     const dispatch = useDispatch();
-    const visiblePlayerForm = useSelector(state => state.visibleForm.visible)
+    const visiblePlayerForm = useSelector(state => state.visibleForm.visible);
+    const urlSong = useSelector(state => state.urlSong.urlSong)
+
 
     const [finishUrlSong, setFinishUrlSong] = useState(``)
 
   return (
     <div className="App">
-        <div className="insert">Insert the link</div>
         {
             visiblePlayerForm
             ?  <PlayerForm/>

@@ -78,6 +78,7 @@
 }
 
 .url_search .insert {
+  justify-content: center;
   font-style: normal;
   font-size: 24px;
   line-height: 32px;
@@ -136,6 +137,145 @@
   }
   .url_search {
     width: 100%;
+  }
+}
+.info_section_dark {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.info_section_dark .maie_dark_info {
+  display: flex;
+}
+.info_section_dark .maie_dark_info .maine_light {
+  color: #F5F6F7;
+  padding: 4% 20% 0 0;
+}
+
+.how_it_works {
+  flex-basis: 50%;
+}
+
+.aws_cloud {
+  flex-basis: 50%;
+  position: relative;
+}
+
+.yellow {
+  position: absolute;
+  box-sizing: border-box;
+  width: 92.65px;
+  height: 92px;
+  top: 150px;
+  background: #F8D231;
+}
+
+.block {
+  position: absolute;
+  width: 180px;
+  height: 0px;
+  left: 92.65px;
+  top: 196px;
+  border: 1px dashed #919E9F;
+}
+
+.vert {
+  position: absolute;
+  width: 136.47px;
+  height: 0px;
+  left: 205px;
+  top: 196px;
+  border: 1px dashed #919E9F;
+  transform: rotate(90deg);
+}
+
+.vert_top {
+  position: absolute;
+  width: 180px;
+  height: 0px;
+  left: 272px;
+  top: 126px;
+  border: 1px dashed #919E9F;
+}
+
+.vert_bot {
+  position: absolute;
+  width: 180px;
+  height: 0px;
+  left: 272px;
+  top: 265px;
+  border: 1px dashed #919E9F;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 107px;
+  height: 107px;
+  background: #323033;
+}
+.box img {
+  position: absolute;
+  left: 10%;
+  top: 22%;
+}
+
+.box_height {
+  position: absolute;
+  left: 450px;
+  top: 71px;
+}
+
+.box_under {
+  position: absolute;
+  left: 450px;
+  top: 211px;
+}
+
+@media (max-width: 1200px) {
+  .yellow {
+    width: 80px;
+    height: 80px;
+    top: 175px;
+  }
+  .block {
+    width: 90px;
+    left: 79.925px;
+    top: 217px;
+  }
+  .vert {
+    width: 120.235px;
+    left: 112.5px;
+    top: 215px;
+  }
+  .vert_top {
+    width: 90px;
+    left: 174px;
+    top: 155px;
+  }
+  .vert_bot {
+    width: 90px;
+    left: 174px;
+    top: 274px;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+  .box img {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 15%;
+  }
+  .box_height {
+    left: 265px;
+    top: 114.5px;
+  }
+  .box_under {
+    left: 265px;
+    top: 235.5px;
   }
 }
 

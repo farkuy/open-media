@@ -25,8 +25,8 @@ const RequestStore = ({oneClickStoreUrl}) => {
                         onClick={async (e) => {
                             await e.stopPropagation();
                             await e.preventDefault();
-                            console.log(request)
-                            await oneClickStoreUrl(request)
+                            await dispatch({type: 'ADD_URL_SONG', payload: request})
+                            await oneClickStoreUrl(request);
                         }}
                         key={index}
                         value={request}

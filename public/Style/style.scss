@@ -156,6 +156,8 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    margin: 0 0 20px 0;
+
   }
 
   .mini_title {
@@ -203,6 +205,7 @@
 
 .how_it_works {
   flex-basis:50%;
+
 }
 
 .aws_cloud {
@@ -347,3 +350,163 @@
     top: 235.5px;
   }
 }
+
+@media (max-width: 800px) {
+  .info_section_dark {
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 18px;
+    .maie_dark_info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 0 20px 0;
+      padding: 0 ;
+
+      .maine_light {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 0 ;
+        flex-basis: 50%;
+      }
+    }
+  }
+  .how_it_works {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .aws_cloud {
+    display: none;
+  }
+
+}
+
+.tech {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  justify-items: left;
+  letter-spacing: -0.4px;
+  padding: 0 0px 20px 0;
+  color: #F5F6F7;
+
+
+
+}
+.select {
+  display: flex;
+
+}
+.tablinks {
+  margin: 0 20px 0 0;
+  font-size: 24px;
+  line-height: 32px;
+
+  letter-spacing: -0.4px;
+  color: #F5F6F7;
+ }
+
+.tabcontent {
+  display: none;
+}
+
+.tabs_body {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+
+  letter-spacing: -0.4px;
+
+  color: #EEEEEE;
+}
+
+.technical {
+  width: 100%;
+  padding: 0 0 0 20px;
+}
+
+.own_server {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs_block:target {
+  display: block;
+}
+
+.tabs_block:active {
+  color: #CFD3D6;
+}
+
+.amazon {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex-basis:50%;
+
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  flex-basis:50%;
+
+}
+
+.roww {
+  display: flex;
+  width: 90%;
+  border-bottom: 1px solid rgba(207, 211, 214, 0.1);
+}
+
+.ceil {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .tabs_body {
+    font-size: 18px;
+  }
+  .own_server{
+    flex-direction: column;
+  }
+  .tech {
+    font-size: 25px;
+  }
+  .tablinks {
+    font-size: 22px;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .left {
+    flex-direction: column;
+
+  }
+  .right {
+    flex-direction: column;
+
+  }
+  .roww {
+    flex-direction: column;
+  }
+}
+
+.tabs_block {
+  display: none;
+}
+.column {
+  display: flex;
+  flex-direction: row;
+}
+
+

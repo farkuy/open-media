@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/open-media-test-player-farkuy/static/css/main.4f1dc4c6.css",
+    "main.js": "/open-media-test-player-farkuy/static/js/main.356ff99c.js",
+    "index.html": "/open-media-test-player-farkuy/index.html",
+    "main.4f1dc4c6.css.map": "/open-media-test-player-farkuy/static/css/main.4f1dc4c6.css.map",
+    "main.356ff99c.js.map": "/open-media-test-player-farkuy/static/js/main.356ff99c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f1dc4c6.css",
+    "static/js/main.356ff99c.js"
+  ]
+}
